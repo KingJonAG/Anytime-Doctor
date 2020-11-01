@@ -1,4 +1,11 @@
-.profile-content{
-    width: 40%;
-    height: auto;
+*{
+    box-sizing: border-box;
+}
+.profile-content p{
+    color: blue;
+    height: 60px;
+
+}
+.mainbtn{
+    text-align: right;
 }
