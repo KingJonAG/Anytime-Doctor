@@ -1,3 +1,4 @@
+
 /* common */
 
 *{
@@ -5,6 +6,34 @@
 }
 
 /* HOME */
+
+/* Navbar */
+
+.myNavbar{
+    background-color: #fad487;
+    padding: 3rem;
+    height: 4rem;
+    font-size: 1.3rem;
+}
+
+.myNavTitle{
+    font-size: 1.5rem;
+    font-weight: 200;
+    border: #901838 solid 2px ;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #96c2f5;
+}
+
+#navbarSupportedContent li a{
+    color: rgb(0, 1, 5);
+}
+
+#navbarSupportedContent li a:hover{
+    padding-bottom: 6px;
+    color: rgb(236, 80, 18);
+    border-bottom: solid red 2px;
+}
 
 /* buttons */
 
@@ -21,6 +50,20 @@
     padding-top: 50px;
 }
 
+/* Signup */
+
+.signup{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.signup label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 /* DASHBOARD */
 
 /* Profile details */
@@ -35,7 +78,8 @@
 /* Buttons */
 
 .keyBtn{
-    width: 100%;
+    width: 90%;
     height: 6rem;
     margin-bottom: 10px;
+    font-size: 1.5rem;
 }
