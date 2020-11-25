@@ -113,11 +113,39 @@
     justify-content: center;
     z-index: 1;
 }
-
 .signup label{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
     font-weight: 600;
+}
+
+/* showcase */
+
+.showcase{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(252, 218, 189);
+}
+.showcase h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: rgb(243, 121, 14);
+}
+.showcase p{
+    font-weight: 300;
+}
+
+/* subscribe */
+
+.subfield{
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: 6rem;
+}
+.subcontent{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(243, 121, 14);
+    font-weight: 300;
 }
 
 /* DASHBOARD */

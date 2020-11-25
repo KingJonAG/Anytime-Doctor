@@ -105,8 +105,8 @@ header.masthead h1 {
   background-color: #343a40;
   background: url("../img/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
 }
 
 .call-to-action .overlay {
