@@ -8,34 +8,34 @@
 /* HOME */
 
 /* Navbar */
-
+.navrow{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 .myNavbar{
     background-color: #fad487;
-    padding: 3rem;
+    padding: 2rem;
     height: 4rem;
     font-size: 1.3rem;
 }
-
 .myNavTitle{
     font-size: 1.5rem;
     font-weight: 200;
-    border: #901838 solid 2px ;
+    border: #901838 solid 1px ;
     border-radius: 5px;
-    padding: 8px;
+    padding: 4px;
     background-color: #96c2f5;
 }
-
 #navbarSupportedContent li a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 1, 5);
 }
-
 #navbarSupportedContent li a:hover{
     padding-bottom: 6px;
     color: rgb(236, 80, 18);
     border-bottom: solid red 2px;
 }
-
 .maintext{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(250, 250, 250);
@@ -50,6 +50,7 @@
     text-align: left;
 }
 .joinbtn{
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 200;
     width: 6rem;
@@ -57,6 +58,7 @@
     text-align: center;
 }
 .joinbtn:hover{
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 200;
     width: 6rem;
@@ -104,21 +106,6 @@
 .docpanelsubtext{
     font-size: 1rem;
 }
-
-
-/* Signup */
-
-.signup{
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-}
-.signup label{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
 /* showcase */
 
 .showcase{
@@ -148,6 +135,57 @@
     font-weight: 300;
 }
 
+/* Join page */
+
+.maincontent{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+.maincontent h1{
+    color: rgb(243, 121, 14);
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+.maincontent p{
+    font-size: 1rem;
+}
+
+/* join form */
+
+.signup{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.signup label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 10rem;
+}
+.formitem{
+    display: flex;
+    width: 30rem;
+}
+.signup form button{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+.joinformbtn{
+    text-align: center;
+    color: white;
+    background-color: rgb(243, 121, 14);;
+}
+.joinformbtn:hover{
+    text-align: center;
+    color: white;
+    background-color: rgb(236, 138, 52);
+}
 /* DASHBOARD */
 
 /* Profile details */
