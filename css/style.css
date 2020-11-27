@@ -205,3 +205,43 @@
     margin-bottom: 10px;
     font-size: 1.5rem;
 }
+
+/* Doctors page */
+
+/* search */
+
+.search-sec{
+    padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+    background-color: rgb(243, 121, 14);
+    color: white;
+}
+.wrn-btn:hover{
+    color: white;
+    background-color: rgb(236, 138, 52);
+}
+
+/* Doctor panel */
+
+.docitem{
+    margin-bottom: 2.5rem;
+}
