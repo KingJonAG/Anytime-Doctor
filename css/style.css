@@ -188,6 +188,13 @@
 }
 /* DASHBOARD */
 
+/* basic */
+
+.contentrow{
+    margin-top: 2rem;
+}
+
+
 /* Profile details */
 
 .profile-content{
@@ -205,7 +212,6 @@
     margin-bottom: 10px;
     font-size: 1.5rem;
 }
-
 /* Doctors page */
 
 /* search */
@@ -223,7 +229,6 @@
     background-image: none;
     border: 1px solid #ccc;
     height: calc(3rem + 2px) !important;
-    border-radius:0;
 }
 .wrn-btn{
     width: 100%;
@@ -231,7 +236,6 @@
     font-weight: 400;
     text-transform: capitalize;
     height: calc(3rem + 2px) !important;
-    border-radius:0;
     background-color: rgb(243, 121, 14);
     color: white;
 }
@@ -245,3 +249,26 @@
 .docitem{
     margin-bottom: 2.5rem;
 }
+
+/* Doctor profile */
+
+#pic img{
+    width: 100%;
+    height: 100%;
+}
+#picfacts{
+    margin-top: 4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 4rem;
+}
+#description{
+    margin: 3rem;
+}
+
+/* Home page/Logged */
+
+/* navbar */
+/* #navbarSupportedContent ul .dbordli{
+    color: royalblue;
+} */
