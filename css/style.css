@@ -186,6 +186,9 @@
     color: white;
     background-color: rgb(236, 138, 52);
 }
+.signup form .lastman{
+    margin-bottom: 2rem;
+}
 /* DASHBOARD */
 
 /* basic */
@@ -272,3 +275,13 @@
 /* #navbarSupportedContent ul .dbordli{
     color: royalblue;
 } */
+
+/* Login page */
+
+.forgo-pass{
+    margin: auto;
+    width: 10rem;
+}
+.log-form{
+    margin-bottom: 1rem;
+}
