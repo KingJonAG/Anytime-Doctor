@@ -200,11 +200,33 @@
 
 /* Profile details */
 
-.profile-content{
+/* .profile-content{
     width: 60vw;
     height: 30rem;
     background-color: grey;
     margin: auto;
+} */
+.userpp img{
+    width: 100%;
+    border-radius: 50%;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+}
+.profile-content h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+.userdata{
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+.userdata h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
 }
 
 /* Buttons */
@@ -279,9 +301,17 @@
 /* Login page */
 
 .forgo-pass{
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.4rem;
     width: 10rem;
 }
 .log-form{
     margin-bottom: 1rem;
+}
+.dnthvacc{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    width: 20rem;
 }
