@@ -218,7 +218,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; 
 }
 .userdata{
     margin-left: 3rem;
@@ -314,4 +314,32 @@
     margin-right: auto;
     margin-bottom: 2rem;
     width: 20rem;
+}
+
+/* Available Online */
+
+.avilblebtn{
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(21, 235, 39);
+    border-radius: 50%;
+    align-self: center;
+    margin: 0.5rem;
+}
+.availbledoc{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    margin-left: 0;
+}
+.availbledoc a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(45, 106, 218);
+    color: white;
+    padding: 0.7rem;
+    border-radius: 20px;
+}
+.availbledoc a:hover{
+    background-color: rgb(243, 121, 14);
 }
