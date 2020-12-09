@@ -232,7 +232,7 @@
 /* Buttons */
 
 .keyBtn{
-    width: 90%;
+    width: 24rem;
     height: 6rem;
     margin-bottom: 10px;
     font-size: 1.5rem;
@@ -342,4 +342,21 @@
 }
 .availbledoc a:hover{
     background-color: rgb(243, 121, 14);
+}
+
+/* confirm_appointment */
+
+.confirm-form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+.confirm-form h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1rem;
+}
+.confirmapp_btn{
+    text-align: center;
 }
