@@ -186,6 +186,9 @@
     color: white;
     background-color: rgb(236, 138, 52);
 }
+.signup form .lastman{
+    margin-bottom: 2rem;
+}
 /* DASHBOARD */
 
 /* basic */
@@ -197,17 +200,39 @@
 
 /* Profile details */
 
-.profile-content{
+/* .profile-content{
     width: 60vw;
     height: 30rem;
     background-color: grey;
     margin: auto;
+} */
+.userpp img{
+    width: 100%;
+    border-radius: 50%;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+}
+.profile-content h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem; 
+}
+.userdata{
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+.userdata h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
 }
 
 /* Buttons */
 
 .keyBtn{
-    width: 90%;
+    width: 24rem;
     height: 6rem;
     margin-bottom: 10px;
     font-size: 1.5rem;
@@ -272,3 +297,66 @@
 /* #navbarSupportedContent ul .dbordli{
     color: royalblue;
 } */
+
+/* Login page */
+
+.forgo-pass{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.4rem;
+    width: 10rem;
+}
+.log-form{
+    margin-bottom: 1rem;
+}
+.dnthvacc{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    width: 20rem;
+}
+
+/* Available Online */
+
+.avilblebtn{
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(21, 235, 39);
+    border-radius: 50%;
+    align-self: center;
+    margin: 0.5rem;
+}
+.availbledoc{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    margin-left: 0;
+}
+.availbledoc a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(45, 106, 218);
+    color: white;
+    padding: 0.7rem;
+    border-radius: 20px;
+}
+.availbledoc a:hover{
+    background-color: rgb(243, 121, 14);
+}
+
+/* confirm_appointment */
+
+.confirm-form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+.confirm-form h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1rem;
+}
+.confirmapp_btn{
+    text-align: center;
+}
