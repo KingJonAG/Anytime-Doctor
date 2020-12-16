@@ -52,12 +52,12 @@
       <div class="row">
         <div class="col-md-6">
           <div class="mainbtn1">
-            <a href="join.html"><button type="button" class="btn btn-lg joinbtn">Join</button></a>
+            <a href="{% url 'register' %}"><button type="button" class="btn btn-lg joinbtn">Join</button></a>
           </div>
         </div>
         <div class="col-md-6">
           <div class="mainbtn2">
-            <button type="button" class="btn btn-primary btn-lg signinbtn">SignIn</button>
+            <a href="{% url 'login' %}"><button type="button" class="btn btn-primary btn-lg signinbtn">SignIn</button></a>
           </div>  
         </div>
       </div>

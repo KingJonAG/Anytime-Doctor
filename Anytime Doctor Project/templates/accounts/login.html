@@ -1,22 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendor/css/landing-page.css" rel="stylesheet">
+    <link href="{% static 'vendor/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/css/landing-page.css' %}" rel="stylesheet">
     <!-- <link href="vendor/css/landing-page.min.css" rel="stylesheet"> -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <div class="row">
         <div class="col-md-12">
           <nav class="navbar navbar-expand-lg navbar-light myNavbar">
-            <a class="navbar-brand myNavTitle" href="index.html">ANYTIME DOCTOR</a>
+            <a class="navbar-brand myNavTitle" href="{% url 'index' %}">ANYTIME DOCTOR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="howthiswork.html">How this works</a>
@@ -42,18 +43,19 @@
     <div class="maincontent">
         <h1>Welcome</h1>
     </div>
-
     <!-- SignUp -->
     <div class="signup log-form"> 
-	vhj
-        <form action="" class="formsign">
+      <!-- Alert -->
+      {% include "partial/alerts.html" %}
+        <form action="{% url 'login' %}" class="formsign" method="POST">
+          {% csrf_token %}
             <div class="form-group formitem">
             <label for="name">Email</label>
-            <input type="text" class="form-control" id="name">
+            <input type="text" name="email" class="form-control" id="name">
             </div>
             <div class="form-group formitem lastman">
             <label for="lname">Password</label>
-            <input type="text" class="form-control" id="lname">
+            <input type="text" name="pass" class="form-control" id="lname">
             </div>
             <button class="btn btn-block joinformbtn" type="submit">Login</button>
         </form> 
@@ -114,7 +116,9 @@
   </footer>
 
 
-<script src="vendor/js/jquery-3.5.1.slim.min.js"></script>
-<script src="vendor/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'vendor/js/jquery-3.5.1.js' %}"></script>
+  <!-- <script src="{% static 'vendor/js/jquery-3.5.1.slim.min.js' %}"></script> -->
+  <script src="{% static 'vendor/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

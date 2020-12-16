@@ -1,22 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendor/css/landing-page.css" rel="stylesheet">
+    <title>Join Us</title>
+    <link href="{% static 'vendor/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/css/landing-page.css' %}" rel="stylesheet">
     <!-- <link href="vendor/css/landing-page.min.css" rel="stylesheet"> -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <div class="row">
         <div class="col-md-12">
           <nav class="navbar navbar-expand-lg navbar-light myNavbar">
-            <a class="navbar-brand myNavTitle" href="index.html">ANYTIME DOCTOR</a>
+            <a class="navbar-brand myNavTitle" href="{% url 'index' %}">ANYTIME DOCTOR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="howthiswork.html">How this works</a>
@@ -41,29 +42,42 @@
     <!-- main-content -->
     <div class="maincontent">
         <h1>Welcome</h1>
+        <p>Just few more steps</p>
     </div>
 
     <!-- SignUp -->
-    <div class="signup log-form"> 
-	vhj
-        <form action="" class="formsign">
+    <div class="signup"> 
+      <!-- Alert -->
+      {% include "partial/alerts.html" %}
+        <form action="{% url 'register' %}" class="formsign" method="POST">
+          {% csrf_token %}
             <div class="form-group formitem">
-            <label for="name">Email</label>
-            <input type="text" class="form-control" id="name">
+            <label for="name">First Name</label>
+            <input type="text" name="fname" class="form-control" id="name">
+            </div>
+            <div class="form-group formitem">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" class="form-control" id="lname">
+            </div>
+            <div class="form-group formitem">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" id="email">
+            </div>
+            <div class="form-group formitem">
+              <label for="contact">Contact No</label>
+              <input type="text" name="contact" class="form-control" id="contact">
+            </div>
+            <div class="form-group formitem">
+            <label for="pword">Password</label>
+            <input type="text" name="pass" class="form-control" id="pword">
             </div>
             <div class="form-group formitem lastman">
-            <label for="lname">Password</label>
-            <input type="text" class="form-control" id="lname">
+              <label for="cpword">Confirm Password</label>
+              <input type="text" name="cpass" class="form-control" id="cpword">
             </div>
-            <button class="btn btn-block joinformbtn" type="submit">Login</button>
+            <button class="btn btn-block joinformbtn" type="submit">Join</button>
         </form> 
     </div>  
-    <div class="forgo-pass">
-      <a href="#">Forgot your password</a></br>
-    </div>
-    <div class="dnthvacc">
-      <a href="join.html">Don't have an account? Click here to join us</a>
-    </div>
 
 
     <!-- Footer -->
@@ -114,7 +128,9 @@
   </footer>
 
 
-<script src="vendor/js/jquery-3.5.1.slim.min.js"></script>
-<script src="vendor/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/js/jquery-3.5.1.js"></script>
+  <!-- <script src="static/vendor/js/jquery-3.5.1.slim.min.js"></script> -->
+  <script src="static/vendor/js/bootstrap.bundle.min.js"></script>
+  <script src="static/js/main.js"></script>
 </body>
 </html>
