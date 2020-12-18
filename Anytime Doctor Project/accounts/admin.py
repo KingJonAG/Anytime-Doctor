@@ -1,3 +1,7 @@
 from django.contrib import admin
+# from django.contrib.auth.models import User
 
-# Register your models here.
+# class ListingAdmin(admin.ModelAdmin):
+#     list_display=("username","first_name","last_name","email","contact_no","is_staff")
+
+# admin.site.register(ListingAdmin)    
