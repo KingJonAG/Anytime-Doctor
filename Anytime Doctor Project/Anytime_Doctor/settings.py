@@ -32,15 +32,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'pages.apps.PagesConfig',
-    'accounts.apps.AccountsConfig',
-    'doctors.apps.DoctorsConfig',
+    # 'pages.apps.PagesConfig',
+    # 'accounts.apps.AccountsConfig',
+    # 'doctors.apps.DoctorsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pages.apps.PagesConfig',
+    'accounts.apps.AccountsConfig',
+    'doctors.apps.DoctorsConfig',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +138,5 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS={
     messages.ERROR:'danger'
 }
+
+# AUTH_USER_MODEL = 'accounts.CustomUser'
