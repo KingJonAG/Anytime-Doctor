@@ -1,8 +1,8 @@
 from django.contrib import admin
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 
-# class ListingAdmin(admin.ModelAdmin):
-#     list_display=("username","first_name","last_name","email","is_staff","contact_no")
+class ListingAdmin(admin.ModelAdmin):
+    list_display=("first_name","last_name","email","is_staff")
 
-# admin.site.unregister(User)
-# admin.site.register(User,ListingAdmin)    
+admin.site.unregister(User)
+admin.site.register(User,ListingAdmin)    

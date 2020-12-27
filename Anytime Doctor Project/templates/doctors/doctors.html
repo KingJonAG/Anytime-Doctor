@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <link href="{% static 'vendor/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/css/landing-page.css' %}" rel="stylesheet">
+    <!-- <link href="vendor/css/landing-page.min.css" rel="stylesheet"> -->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar navbar-expand-lg navbar-light myNavbar">
+            <a class="navbar-brand myNavTitle" href="index.html">ANYTIME DOCTOR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="howthiswork.html">How this works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    </div>
+
+    <!-- Search bar -->
+
+    <section class="search-sec">
+        <div class="container">
+            <form action="#" method="post" novalidate="novalidate">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <input type="text" class="form-control search-slt" placeholder="Name">
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <input type="text" class="form-control search-slt" placeholder="City">
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                    <option>Ophthalmologist</option>
+                                    <option>Cardilogist</option>
+                                    <option>Neuro Sergen</option>
+                                    <option>Dermatologist</option>
+                                    <option>Gynecologist</option>
+                                    <option>Allergist</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <button type="button" class="btn btn-block wrn-btn">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Doc panel -->
+
+    <section class="testimonials text-center bg-light testMnial">
+    <div class="row">
+        <div class="col-lg-4 docitem">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic10.jpg'}" alt="">
+            <h5>Margaret E.</h5>
+            <p class="font-weight-light mb-0 docpanelsubtext">Doctor 1</p>
+          </div>
+        </div>
+        <div class="col-lg-4 docitem">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic13.jpg'}" alt="">
+            <h5>Fred S.</h5>
+            <p class="font-weight-light mb-0 docpanelsubtext">Doctor 2</p>
+          </div>
+        </div>
+        <div class="col-lg-4 docitem">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic14.jpg'}" alt="">
+            <h5>Sarah W.</h5>
+            <p class="font-weight-light mb-0 docpanelsubtext">Doctor 3</p>
+          </div>
+        </div>
+        <div class="col-lg-4 docitem">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic10.jpg'}" alt="">
+              <h5>Margaret E.</h5>
+              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 1</p>
+            </div>
+          </div>
+          <div class="col-lg-4 docitem">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic13.jpg'}" alt="">
+              <h5>Fred S.</h5>
+              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 2</p>
+            </div>
+          </div>
+          <div class="col-lg-4 docitem">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic14.jpg'}" alt="">
+              <h5>Sarah W.</h5>
+              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 3</p>
+            </div>
+          </div>
+          <div class="col-lg-4 docitem">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic10.jpg'}" alt="">
+              <h5>Margaret E.</h5>
+              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 1</p>
+            </div>
+          </div>
+          <div class="col-lg-4 docitem">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic13.jpg'}" alt="">
+              <h5>Fred S.</h5>
+              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 2</p>
+            </div>
+          </div>
+      </div>
+      </section>
+    
+
+
+    <!-- Footer -->
+  <footer class="footer bg-light myfooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Anytime Doctor 2020. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'vendor/js/jquery-3.5.1.js' %}"></script>
+  <!-- <script src="{% static 'vendor/js/jquery-3.5.1.slim.min.js' %}"></script> -->
+  <script src="{% static 'vendor/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

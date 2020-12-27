@@ -197,6 +197,17 @@
 
 .contentrow{
     margin-top: 2rem;
+    text-align: center;
+}
+.basicBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashHeader{
+    text-align: center !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    color: rgb(243, 121, 14) !important;
 }
 
 

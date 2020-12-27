@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def doclist(request):
+    return render(request,"doctors/doctors.html")
+
+def docprofile(request):
+    return render(request,"doctors/docprofile.html")    
+

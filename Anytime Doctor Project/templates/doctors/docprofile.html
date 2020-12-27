@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Us</title>
     <link href="{% static 'vendor/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/css/landing-page.css' %}" rel="stylesheet">
     <!-- <link href="vendor/css/landing-page.min.css" rel="stylesheet"> -->
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/style.css'%}" rel="stylesheet">
+    <title>Doc_Name</title>
 </head>
-<body>
+<body>  
     <!-- Header -->
     <div class="row">
         <div class="col-md-12">
           <nav class="navbar navbar-expand-lg navbar-light myNavbar">
-            <a class="navbar-brand myNavTitle" href="{% url 'index' %}">ANYTIME DOCTOR</a>
+            <a class="navbar-brand myNavTitle" href="index.html">ANYTIME DOCTOR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,8 +25,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="doctors.html">Doctors</a>
+                  </li>
                 <li class="nav-item">
                   <a class="nav-link" href="howthiswork.html">How this works</a>
                 </li>
@@ -39,48 +42,34 @@
         </div>
     </div>
 
-    <!-- main-content -->
-    <div class="maincontent">
-        <h1>Welcome</h1>
-        <p>Just few more steps</p>
+    <!-- pic and facts -->
+
+    <div class="row" id="picfacts">
+        <section id="pic" class="col-md-4">
+            <img src="{% static 'img/Pic13.jpg' %}" alt="">
+        </section>
+        <section id="facts" class="col-md-8">
+            <div class="docfacts">
+                <ul>
+                  <li>Name</li>
+                  <li>Speciality</li>
+                  <li>Hospital</li>
+                  <li>Contact No</li>
+                  <li>Email: </li>
+                </ul>              
+            </div>
+        </section>
     </div>
 
-    <!-- SignUp -->
-    <div class="signup"> 
-      <!-- Alert -->
-      {% include "partial/alerts.html" %}
-        <form action="{% url 'register' %}" class="formsign" method="POST">
-          {% csrf_token %}
-            <div class="form-group formitem">
-            <label for="name">First Name</label>
-            <input type="text" name="fname" class="form-control" id="name" required>
-            </div>
-            <div class="form-group formitem">
-            <label for="lname">Last Name</label>
-            <input type="text" name="lname" class="form-control" id="lname" required>
-            </div>
-            <div class="form-group formitem">
-            <label for="email">Email</label>
-            <input type="email" name="email" class="form-control" id="email" required>
-            </div>
-            <div class="form-group formitem">
-              <label for="contact">Contact No</label>
-              <input type="text" name="contact" class="form-control" id="contact" required>
-            </div>
-            <div class="form-group formitem">
-            <label for="pword">Password</label>
-            <input type="password" name="pass" class="form-control" id="pword" required>
-            </div>
-            <div class="form-group formitem lastman">
-              <label for="cpword">Confirm Password</label>
-              <input type="password" name="cpass" class="form-control" id="cpword" required>
-            </div>
-            <button class="btn btn-block joinformbtn" type="submit">Join</button>
-        </form> 
-    </div>  
+    <!-- description -->
 
+    <div class="row" id="description"> 
+        <div class="col-md-12 descri">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi ex sequi laborum, reiciendis, explicabo nostrum iusto commodi impedit praesentium facilis doloremque illum aspernatur autem voluptate hic aut cupiditate quos tempore quia, laudantium accusamus neque voluptatem dicta sapiente! Ab similique veritatis praesentium doloribus fugiat ipsa, sapiente, ducimus veniam voluptatibus aliquid exercitationem? Aut, ducimus. Nostrum, minima. Aliquid maiores vitae mollitia provident ea illum ipsam distinctio reiciendis reprehenderit incidunt error numquam alias cumque dolore maxime laudantium, quos architecto est et optio fuga minima, deleniti facilis doloribus! Iusto iure ad sunt nobis corrupti voluptas voluptatem, hic sed error dolore necessitatibus fugiat dignissimos natus quas aut quasi praesentium provident nihil! Minus totam natus reprehenderit perferendis eum quidem quia voluptatem nemo, consequuntur excepturi ratione illum, porro neque similique voluptates architecto officiis! Tempora fugiat aspernatur optio quidem debitis. Est aliquam eius culpa officia nostrum consectetur sint et odit? Labore pariatur delectus qui repellendus ea suscipit illo itaque odit. Optio excepturi, beatae asperiores quo soluta sit obcaecati culpa eos quos modi. Dolorum rem obcaecati natus error similique minus omnis animi quasi placeat tempore, fuga repudiandae perspiciatis ex adipisci voluptate maxime, at itaque consequatur totam esse. Eos beatae natus, nisi alias dolores voluptate qui asperiores, eius velit rerum quae.</p>
+        </div>
+    </div>
 
-    <!-- Footer -->
+     <!-- Footer -->
   <footer class="footer bg-light myfooter">
     <div class="container">
       <div class="row">
@@ -126,7 +115,6 @@
       </div>
     </div>
   </footer>
-
 
   <script src="{% static 'vendor/js/jquery-3.5.1.js' %}"></script>
   <!-- <script src="{% static 'vendor/js/jquery-3.5.1.slim.min.js' %}"></script> -->

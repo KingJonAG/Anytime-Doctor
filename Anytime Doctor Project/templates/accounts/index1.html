@@ -16,7 +16,7 @@
       <div class="row navrow">
         <div class="col-md-12">
           <nav class="navbar navbar-expand-lg navbar-light myNavbar">
-            <a class="navbar-brand myNavTitle" href="index.html">ANYTIME DOCTOR</a>
+            <a class="navbar-brand myNavTitle" href="index1.html">ANYTIME DOCTOR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index1.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Doctors</a>
@@ -35,20 +35,15 @@
                 <li class="nav-item">
                   <a class="nav-link" href="howthiswork.html">How this works</a>
                 </li>
-                <!-- dynamic content -->
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Dashboard</a>
+                <li class="nav-item dbordli">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
                 </li>
-                {% endif %}
               </ul>
-              {% if user.is_authenticated %}
               <div class="text-right">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><form action="logout" method="POST">{% csrf_token %}<input type="submit" value="Logout"></form></li>
-                </ul>
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item"><form action="logout" method="POST">{% csrf_token %}<input type="submit" value="Logout"></form></li>
+              </ul>
               </div>
-              {% endif %}
             </div>
           </nav>
         </div>
@@ -62,26 +57,11 @@
           <h1 class="mb-5 maintext">Meet your Doctor from Home!</h1>
         </div>
       </div>
-    {% if user.is_authenticated %}
       <div class="row">
         <div class="col-md-9 mx-auto">
             <h2>Best Experience With Best People!</h2>
         </div>
       </div>
-    {% else %}
-      <div class="row">
-        <div class="col-md-6">
-          <div class="mainbtn1">
-            <a href="{% url 'register' %}"><button type="button" class="btn btn-lg joinbtn">Join</button></a>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="mainbtn2">
-            <a href="{% url 'login' %}"><button type="button" class="btn btn-primary btn-lg signinbtn">SignIn</button></a>
-          </div>  
-        </div>
-      </div>
-    {% endif %}  
     </div>
   </header>
   </div>
@@ -116,7 +96,7 @@
         <!-- viewmore -->
 
       <div class="docpanelviewmore">
-          <a href="{%url 'doclist' %}"><button btn btn-lg>See All <i class="fas fa-arrow-circle-right"></i></button></a>
+          <a href="doctors.html"><button btn btn-lg>See All <i class="fas fa-arrow-circle-right"></i></button></a>
       </div>
     </div>
   </section>
@@ -148,32 +128,6 @@
       </div>
     </div>
   </section>
-
-  {% if user.is_authenticated == false %}
-  <!-- subscribe -->
-  <section class="call-to-action text-white text-center">
-    <!-- <div class="subscribe"></div> -->
-    <div class="container subcontent">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4">Ready to get Health Tips!SignUp!</h2>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  {% endif %}
 
   <!-- Footer -->
   <footer class="footer bg-light myfooter">
@@ -226,7 +180,7 @@
 
 
     
-    <script src="{% static 'vendor/js/jquery-3.5.1.slim.min.js' %}"></script>
-    <script src="{% static 'vendor/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/js/jquery-3.5.1.slim.min.js' %}"></script>
+  <script src="{% static 'vendor/js/bootstrap.bundle.min.js' %}"></script>
   </body>
 </html>
