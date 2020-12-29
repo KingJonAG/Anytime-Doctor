@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendor/css/landing-page.css" rel="stylesheet">
+    <link href="{% static 'vendor/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/css/landing-page.css' %}" rel="stylesheet">
     <!-- <link href="vendor/css/landing-page.min.css" rel="stylesheet"> -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
     <title>Dashboard</title>
 </head>
 <body>
@@ -36,11 +37,13 @@
                 <a class="nav-link" href="#">About Us</a>
               </li>
             </ul>
-            <div class="text-right">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item"><a Logout class="nav-link" href="index.html">Logout</a></li>
-              </ul>
-            </div>
+            {% if user.is_authenticated %}
+              <div class="text-right">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><form action="logout" method="POST">{% csrf_token %}<input type="submit" value="Logout"></form></li>
+                </ul>
+              </div>
+              {% endif %}
           </div>
         </nav>
       </div>
@@ -70,9 +73,11 @@
             </div>
           </div>
         </div> -->
+      {% if user.is_authenticated %}  
       <div class="col-md-12 dashHeader">
-        <h1>Welcome</h1>
+        <h1>Welcome {{user.first_name}}</h1>
       </div>
+      {% endif %}
       <!-- Main-btns -->
         <div class="col-md-12 basicBtn">
           <div class="row">
@@ -135,7 +140,9 @@
     </footer>
     </div>
     
-    <script src="vendor/js/jquery-3.5.1.slim.min.js"></script>
-    <script src="vendor/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'vendor/js/jquery-3.5.1.js' %}"></script>
+    <!-- <script src="{% static 'vendor/js/jquery-3.5.1.slim.min.js' %}"></script> -->
+    <script src="{% static 'vendor/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

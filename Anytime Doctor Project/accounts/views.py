@@ -57,4 +57,7 @@ def home(request):
 def logout(request):
     if request.method == "POST":
         auth.logout(request)
-        return render(request,"pages/index.html")    
+        return render(request,"pages/index.html")   
+
+def dashboard(request):
+    return render(request,"accounts/dashboard.html")             

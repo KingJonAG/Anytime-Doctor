@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'doctors.apps.DoctorsConfig',
+    'hospitals.apps.HospitalsConfig'
 ]
 
 MIDDLEWARE = [
