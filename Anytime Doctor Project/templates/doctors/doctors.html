@@ -77,64 +77,23 @@
 
     <section class="testimonials text-center bg-light testMnial">
     <div class="row">
+      {% if doctors %}
+        {% for doctor in doctors %}
         <div class="col-lg-4 docitem">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic10.jpg' %}" alt="">
-            <h5>Margaret E.</h5>
-            <p class="font-weight-light mb-0 docpanelsubtext">Doctor 1</p>
+            <img class="img-fluid rounded-circle mb-3" src="{{ doctor.picture.url }}" alt="">
+            <h5>{{ doctor.name }}</h5>
+            <p class="font-weight-light mb-0 docpanelsubtext">{{ doctor.speciality }}</p>
           </div>
         </div>
-        <div class="col-lg-4 docitem">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic13.jpg' %}" alt="">
-            <h5>Fred S.</h5>
-            <p class="font-weight-light mb-0 docpanelsubtext">Doctor 2</p>
-          </div>
+        {% endfor %}
+      {% else %}
+        <div class="col-md-12">
+          <p>No Doctors Available</p>
         </div>
-        <div class="col-lg-4 docitem">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic14.jpg' %}" alt="">
-            <h5>Sarah W.</h5>
-            <p class="font-weight-light mb-0 docpanelsubtext">Doctor 3</p>
-          </div>
-        </div>
-        <div class="col-lg-4 docitem">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic10.jpg' %}" alt="">
-              <h5>Margaret E.</h5>
-              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 1</p>
-            </div>
-          </div>
-          <div class="col-lg-4 docitem">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic13.jpg' %}" alt="">
-              <h5>Fred S.</h5>
-              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 2</p>
-            </div>
-          </div>
-          <div class="col-lg-4 docitem">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic14.jpg' %}" alt="">
-              <h5>Sarah W.</h5>
-              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 3</p>
-            </div>
-          </div>
-          <div class="col-lg-4 docitem">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic10.jpg' %}" alt="">
-              <h5>Margaret E.</h5>
-              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 1</p>
-            </div>
-          </div>
-          <div class="col-lg-4 docitem">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic13.jpg' %}" alt="">
-              <h5>Fred S.</h5>
-              <p class="font-weight-light mb-0 docpanelsubtext">Doctor 2</p>
-            </div>
-          </div>
+      {% endif %}
       </div>
-      </section>
+    </section>
     
 
 
