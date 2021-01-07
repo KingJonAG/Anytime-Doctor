@@ -2,6 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('doclist', views.doclist, name="doclist"),
-    path('docprofile', views.docprofile, name="docprofile")
+    path('', views.doclist, name="doclist"),
+    path('<int:doc_id>', views.docprofile, name="docprofile")
 ]

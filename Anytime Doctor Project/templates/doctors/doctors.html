@@ -82,7 +82,8 @@
         <div class="col-lg-4 docitem">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="{{ doctor.picture.url }}" alt="">
-            <h5>{{ doctor.name }}</h5>
+            <!-- <h5>{{ doctor.name }}</h5> -->
+            <h5><a href="{% url 'docprofile(GET,doctor.id)' %}">{{ doctor.name }}</a></h5>
             <p class="font-weight-light mb-0 docpanelsubtext">{{ doctor.speciality }}</p>
           </div>
         </div>
