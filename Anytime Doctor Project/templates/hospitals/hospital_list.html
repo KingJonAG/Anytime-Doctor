@@ -80,7 +80,7 @@
         <div class="col-lg-4 docitem">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="{{ hospital.picture.url }}" alt="">
-            <h5>{{ hospital.name }}</h5>
+            <h5><a href="{% url 'hospital_profile' hospital.id %}">{{ hospital.name }}</a></h5>
             <div class="availbledoc">
                 <a href="">Book Test</a>
             </div>

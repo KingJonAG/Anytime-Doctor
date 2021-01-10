@@ -45,7 +45,7 @@
      <!-- pic and facts -->
      <div class="row" id="picfacts">
       <section id="pic" class="col-md-4">
-          <img src="{% static '/img/Pic15.jpg' %}" alt="">
+          <img src="{{ hosp_p.picture.url }}" alt="">
       </section>
       <section id="facts" class="col-md-8">
           <div class="docfacts">
@@ -53,23 +53,27 @@
                 <ul>
                   <div class="docfact_li">
                     <li>Hospital</li>
-                    <p>Hospital 1</p>
+                    <p>{{ hosp_p.name }}</p>
                   </div>
                   <div class="docfact_li">
                     <li>Tests</li>
-                    <p>ECG,CT_scan</p>
+                    {% if hosp_p.biopsy %}
+                      <p>Biopsy</p>
+                    {% else %}
+                      <p>-</p>  
+                    {% endif %}  
                   </div>
                   <div class="docfact_li">
                     <li>Location</li>
-                    <p>Kegalle</p>
+                    <p>{{ hosp_p.location }}</p>
                   </div>
                   <div class="docfact_li">
                     <li>Tel_No </li>
-                    <p>0779990284</p>
+                    <p>{{ hosp_p.contact_no }}</p>
                   </div>
                   <div class="docfact_li">
                     <li>Email </li>
-                    <p>jonhere1921@gmail.com</p>
+                    <p>{{ hosp_p.email }}</p>
                   </div>
                 </ul>              
               </ul>              
@@ -81,7 +85,7 @@
 
     <div class="row" id="description"> 
         <div class="col-md-12 descri">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi ex sequi laborum, reiciendis, explicabo nostrum iusto commodi impedit praesentium facilis doloremque illum aspernatur autem voluptate hic aut cupiditate quos tempore quia, laudantium accusamus neque voluptatem dicta sapiente! Ab similique veritatis praesentium doloribus fugiat ipsa, sapiente, ducimus veniam voluptatibus aliquid exercitationem? Aut, ducimus. Nostrum, minima. Aliquid maiores vitae mollitia provident ea illum ipsam distinctio reiciendis reprehenderit incidunt error numquam alias cumque dolore maxime laudantium, quos architecto est et optio fuga minima, deleniti facilis doloribus! Iusto iure ad sunt nobis corrupti voluptas voluptatem, hic sed error dolore necessitatibus fugiat dignissimos natus quas aut quasi praesentium provident nihil! Minus totam natus reprehenderit perferendis eum quidem quia voluptatem nemo, consequuntur excepturi ratione illum, porro neque similique voluptates architecto officiis! Tempora fugiat aspernatur optio quidem debitis. Est aliquam eius culpa officia nostrum consectetur sint et odit? Labore pariatur delectus qui repellendus ea suscipit illo itaque odit. Optio excepturi, beatae asperiores quo soluta sit obcaecati culpa eos quos modi. Dolorum rem obcaecati natus error similique minus omnis animi quasi placeat tempore, fuga repudiandae perspiciatis ex adipisci voluptate maxime, at itaque consequatur totam esse. Eos beatae natus, nisi alias dolores voluptate qui asperiores, eius velit rerum quae.</p>
+            <p>{{ hosp_p.description }}</p>
         </div>
     </div>
 
