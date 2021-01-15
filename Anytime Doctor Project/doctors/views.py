@@ -21,3 +21,22 @@ def docprofile(request, doc_id):
 
     return render(request,"doctors/docprofile.html",context)    
 
+def doclist1(request):
+
+    doctors=doctor.objects.all()
+
+    context = {
+        "doctors":doctors
+    }
+
+    return render(request,"doctors/available_doc.html", context)
+
+def doclist2(request):
+
+    doctors=doctor.objects.all()
+
+    context = {
+        "doctors":doctors
+    }
+
+    return render(request,"doctors/find_doc.html", context)    
