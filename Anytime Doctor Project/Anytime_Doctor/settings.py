@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'doctors.apps.DoctorsConfig',
-    'hospitals.apps.HospitalsConfig'
+    'hospitals.apps.HospitalsConfig',
+    # 'appotests.apps.AppotestsConfig'
 ]
 
 MIDDLEWARE = [

@@ -85,6 +85,7 @@
             <!-- <h5>{{ doctor.name }}</h5> -->
             <h5><a href="{% url 'docprofile' doctor.id %}">{{ doctor.name }}</a></h5>
             <p class="font-weight-light mb-0 docpanelsubtext">{{ doctor.speciality }}</p>
+            <p class="font-weight-light mb-0 docpanelsubtext">{{ doctor.hospital }}</p>
           </div>
         </div>
         {% endfor %}
