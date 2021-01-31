@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Available Doctors</title>
+    <link href="{% static 'vendor/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/css/landing-page.css' %}" rel="stylesheet">
+    <!-- <link href="vendor/css/landing-page.min.css" rel="stylesheet"> -->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar navbar-expand-lg navbar-light myNavbar">
+            <a class="navbar-brand myNavTitle" href="index.html">ANYTIME DOCTOR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="howthiswork.html">How this works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    </div>
+
+    <!-- confirm-form -->
+
+    <div class="confirm-form">
+        <h3>Patient's Name : </h3>
+        <h3>Test : </h3>
+        <h3>Doctor in Charge : </h3>
+        <h3>Hospital : </h3>
+        <h3>date : </h3>
+        <h3>Time : </h3>
+        <h3>Patient Number : </h3>
+        <div class="confirmapp_btn">
+            <button class="btn btn-lg btn-primary">Confirm</button>
+            <button class="btn btn-lg btn-primary">Go Back</button>
+        </div>
+    </div>
+
+        <!-- Footer -->
+  <footer class="footer bg-light myfooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Anytime Doctor 2020. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'vendor/js/jquery-3.5.1.js' %}"></script>
+  <!-- <script src="{% static 'vendor/js/jquery-3.5.1.slim.min.js' %}"></script> -->
+  <script src="{% static 'vendor/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+    
+</body>
+</html>
