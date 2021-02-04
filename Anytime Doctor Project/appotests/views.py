@@ -13,4 +13,5 @@ def confirmAppointment(request,doc_id):
         "hospitals":hospitals
     }
 
+
     return render(request,"appotests/confirm_appointment.html", context)    

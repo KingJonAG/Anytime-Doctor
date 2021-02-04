@@ -30,6 +30,9 @@
                   <a class="nav-link" href="#">Doctors</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="#">Hospitals</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="#">Services</a>
                 </li>
                 <li class="nav-item">
@@ -90,6 +93,42 @@
   <section class="testimonials text-center bg-light testMnial">
     <div class="container">
       <h2 class="mb-5 docpaneltext">People who here to help You..</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic10.jpg' %}" alt="">
+            <h5>Margaret E.</h5>
+            <p class="font-weight-light mb-0 docpanelsubtext">Doctor 1</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic13.jpg' %}" alt="">
+            <h5>Fred S.</h5>
+            <p class="font-weight-light mb-0 docpanelsubtext">Doctor 2</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="{% static 'img/Pic14.jpg' %}" alt="">
+            <h5>Sarah W.</h5>
+            <p class="font-weight-light mb-0 docpanelsubtext">Doctor 3</p>
+          </div>
+        </div>
+      </div>
+        <!-- viewmore -->
+
+      <div class="docpanelviewmore">
+          <a href="{%url 'doclist' %}"><button btn btn-lg>See All <i class="fas fa-arrow-circle-right"></i></button></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- hospital_Panel -->
+  <section class="testimonials text-center bg-light testMnial" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="mb-5 docpaneltext">Places available to take care of you..</h2>
       <div class="row">
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
