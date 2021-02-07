@@ -1,0 +1,8 @@
+@media (max-width:991px){
+    .myNavTitle{
+        margin-top: -1.5rem;
+    }
+    .navbar-toggler{
+        margin-top: -1.5rem;
+    }
+}
