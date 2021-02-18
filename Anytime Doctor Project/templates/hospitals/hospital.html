@@ -57,8 +57,12 @@
                   </div>
                   <div class="docfact_li">
                     <li>Tests</li>
-                    {% if hosp_p.biopsy %}
-                      <p>Biopsy</p>
+                    {% if test_list %}
+                      {% for x in test_list %}
+                        {% if x %}
+                          <p>{% x %}</p>
+                        {% endif %}
+                      {% endfor %}    
                     {% else %}
                       <p>-</p>  
                     {% endif %}  

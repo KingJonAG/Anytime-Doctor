@@ -13,7 +13,7 @@ def confirmAppointment(request,doc_id):
         time=request.POST["time"]
 
 
-        appointment=appointment_details(doctor=doctor.objects.get,hospital=doctor.hospital,date=date,time=time)
+        appointment=appointment_details(hospital_id=doctor.objects.get(id=doc_id).hospital.id,doctor_id=doc_id,patient_id=request.user.id,date=date,time=time)
         appointment.save()
         messages.success(request,"Appointment Placed")
         return redirect("dashboard")  
@@ -29,3 +29,7 @@ def confirmAppointment(request,doc_id):
 
 
     return render(request,"appotests/confirm_appointment.html", context)    
+
+def select_test(request):
+    return render(request,"appotests/select_test.html")
+

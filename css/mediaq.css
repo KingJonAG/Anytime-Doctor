@@ -4,5 +4,15 @@
     }
     .navbar-toggler{
         margin-top: -1.5rem;
+        background-color: rgba(231, 145, 95, 0.699);
+    }
+    .nav-link{
+        color: snow;
+    }
+}
+@media (max-width:362px){
+    .navbar-toggler{
+        background-color: rgba(255, 255, 255, 0.699);
+        margin-top: 1.8rem;
     }
 }

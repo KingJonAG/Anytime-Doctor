@@ -1,9 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import auth
+from doctors.models import doctor
 
 def index(request):
-    return render(request,"pages/index.html")
+
+    doctors=doctor.objects.all()
+
+    context = {
+        "doctors":doctors
+    }
+
+
+    return render(request,"pages/index.html",context)
 
 def logout(request):
     if request.method == "POST":
