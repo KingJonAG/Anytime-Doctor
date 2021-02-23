@@ -15,10 +15,11 @@ def hospital_list(request):
 def hospital_profile(request,hosp_id):
 
     hosp_p=get_object_or_404(hospital,pk=hosp_id)
+    test_list=get_object_or_404(hospital.blood_count,hospital.biopsy,hospital.ct_scan,hospital.ecg,hospital.ultra_sound,hospital.angiogram,pk=hosp_id)
 
     context = {
         "hosp_p":hosp_p,
-        "test_list":[hospital.blood_count,hospital.biopsy,hospital.ct_scan,hospital.ecg,hospital.ultra_sound,hospital.angiogram]
+        "test_list":test_list
     }
 
     return render(request,"hospitals/hospital.html",context)      

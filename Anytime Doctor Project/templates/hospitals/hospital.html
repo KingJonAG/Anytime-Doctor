@@ -56,18 +56,6 @@
                     <p>{{ hosp_p.name }}</p>
                   </div>
                   <div class="docfact_li">
-                    <li>Tests</li>
-                    {% if test_list %}
-                      {% for x in test_list %}
-                        {% if x %}
-                          <p>{% x %}</p>
-                        {% endif %}
-                      {% endfor %}    
-                    {% else %}
-                      <p>-</p>  
-                    {% endif %}  
-                  </div>
-                  <div class="docfact_li">
                     <li>Location</li>
                     <p>{{ hosp_p.location }}</p>
                   </div>
@@ -80,7 +68,15 @@
                     <p>{{ hosp_p.email }}</p>
                   </div>
                 </ul>              
-              </ul>              
+              </ul>    
+              <div class="tests_present">
+                <h3>Tests Available</h3>
+                <ul>
+                  {% for x in test_list %}
+                      <li>{{ x }}</li>
+                  {% endfor %}
+                </ul>
+              </div>        
           </div>
       </section>
     </div>
