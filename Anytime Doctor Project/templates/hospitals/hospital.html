@@ -72,9 +72,24 @@
               <div class="tests_present">
                 <h3>Tests Available</h3>
                 <ul>
-                  {% for x in test_list %}
-                      <li>{{ x }}</li>
-                  {% endfor %}
+                  {% if hosp_p.biopsy %}
+                    <li>Biopsy</li>
+                  {% endif %}  
+                  {% if hosp_p.blodd_count %}
+                    <li>Blood Count</li>
+                  {% endif %} 
+                  {% if hosp_p.ecg %}
+                    <li>ECG</li>
+                  {% endif %} 
+                  {% if hosp_p.ct_scan %}
+                    <li>CT Scan</li>
+                  {% endif %} 
+                  {% if hosp_p.angiogram %}
+                    <li>Angiogram</li>
+                  {% endif %} 
+                  {% if hosp_p.ultra_sound %}
+                    <li>Ultra Sound</li>
+                  {% endif %} 
                 </ul>
               </div>        
           </div>

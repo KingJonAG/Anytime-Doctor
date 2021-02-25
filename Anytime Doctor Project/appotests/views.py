@@ -30,6 +30,13 @@ def confirmAppointment(request,doc_id):
 
     return render(request,"appotests/confirm_appointment.html", context)    
 
-def select_test(request):
-    return render(request,"appotests/select_test.html")
+def select_test(request,hosp_id):
+
+    hosp_p=get_object_or_404(hospital,pk=hosp_id)
+
+    context = {
+      "hosp_p":hosp_p
+    }
+
+    return render(request,"appotests/select_test.html",context)
 

@@ -42,9 +42,10 @@
     <!-- confirm-form -->
 
     <div class="confirm-form">
+      <form action="#" method="POST">
+        {% csrf_token %}
         <h3>Patient's Name : </h3>
         <h3>Test : </h3>
-        <h3>Doctor in Charge : </h3>
         <h3>Hospital : </h3>
         <h3>date : </h3>
         <h3>Time : </h3>
@@ -53,6 +54,7 @@
             <button class="btn btn-lg btn-primary">Confirm</button>
             <button class="btn btn-lg btn-primary">Go Back</button>
         </div>
+      </form>  
     </div>
 
         <!-- Footer -->

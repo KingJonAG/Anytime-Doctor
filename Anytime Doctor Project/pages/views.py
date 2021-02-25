@@ -8,7 +8,7 @@ def index(request):
     doctors=doctor.objects.all()
 
     context = {
-        "doctors":doctors
+        "doctors":doctors[:3]
     }
 
 

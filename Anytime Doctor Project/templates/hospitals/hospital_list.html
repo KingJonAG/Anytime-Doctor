@@ -82,7 +82,7 @@
             <img class="img-fluid rounded-circle mb-3" src="{{ hospital.picture.url }}" alt="">
             <h5><a href="{% url 'hospital_profile' hospital.id %}">{{ hospital.name }}</a></h5>
             <div class="availbledoc">
-                <a href="">Book Test</a>
+                <a href="{% url 'select_test' hospital.id %}">Book Test</a>
             </div>
           </div>
         </div>
