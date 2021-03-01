@@ -44,11 +44,36 @@
     <div class="confirm-form">
       <form action="#" method="POST">
         {% csrf_token %}
-        <h3>Patient's Name : </h3>
-        <h3>Test : </h3>
-        <h3>Hospital : </h3>
-        <h3>date : </h3>
-        <h3>Time : </h3>
+        <h3>Patient's Name : {{ user.first_name }} </h3>
+        <h3>Test :</br></br>
+          {% if hosp_p.biopsy %}
+            <input type="radio" id="biopsy" name="test" value="biopsy">
+            <label for="biopsy">Biopsy</label>
+          {% endif %}  
+          {% if hosp_p.blood_count %}
+            <input type="radio" id="blood" name="test" value="blood_count">
+            <label for="blood">Blood Count</label>
+          {% endif %} 
+          {% if hosp_p.ecg %}
+            <input type="radio" id="ecg" name="test" value="ecg">
+            <label for="ecg">ECG</label>
+          {% endif %} 
+          {% if hosp_p.ct_scan %}
+            <input type="radio" id="ct" name="test" value="ct">
+            <label for="ct">CT Scan</label>
+          {% endif %} 
+          {% if hosp_p.angiogram %}
+            <input type="radio" id="angio" name="test" value="angiogram">
+            <label for="angio">Angiogram</label>
+          {% endif %} 
+          {% if hosp_p.ultra_sound %}
+           <input type="radio" id="ultra" name="test" value="ultra_sound">
+           <label for="ultra">Ultra Sound</label>
+          {% endif %} 
+        </h3>
+        <h3>Hospital : {{ hosp_p.name }}</h3>
+        <h3>date : <input type="date" name="date" required> </h3>
+        <h3>Time(8 a.m. - 10 p.m.) : <input type="time" name="time" required> </h3>
         <h3>Patient Number : </h3>
         <div class="confirmapp_btn">
             <button class="btn btn-lg btn-primary">Confirm</button>

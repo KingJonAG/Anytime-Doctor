@@ -7,9 +7,22 @@
         background-color: rgba(231, 145, 95, 0.699);
     }
     .nav-link{
-        color: snow;
+        /* color: snow!important; */
+        /* background-color: tomato; */
+        border-bottom: black solid 2px;
+        padding-bottom: 6px;
     }
-}
+    /* .nav-link:hover{
+        color: white!important;
+        background-color: lightblue;
+        border-bottom: black solid 1px;
+    } */
+    .navbar-nav{
+        background-color:  #fad487;;
+        width: 10rem;
+        text-align: center;
+        /* opacity: 0.9; */
+    }
 @media (max-width:362px){
     .navbar-toggler{
         background-color: rgba(255, 255, 255, 0.699);
