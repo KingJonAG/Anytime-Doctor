@@ -78,8 +78,28 @@
         <h1>Welcome {{user.first_name}}</h1>
       </div>
       {% endif %}
+
+      <!-- appointments -->
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="p_appointment">
+              <h2>Active Appointments</h2>
+              <div class="appointment_card">
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="t_appointments">
+              <h2>Active Test Appointments</h2>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Main-btns -->
-        <div class="col-md-12 basicBtn">
+        <div class="col-md-6 basicBtn">
            <!-- Alert -->
       {% include "partial/alerts.html" %}
           <div class="row">

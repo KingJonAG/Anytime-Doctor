@@ -42,7 +42,7 @@
     <!-- confirm-form -->
 
     <div class="confirm-form">
-      <form action="#" method="POST">
+      <form action="{% url 'select_test' hosp_p.id %}" method="POST">
         {% csrf_token %}
         <h3>Patient's Name : {{ user.first_name }} </h3>
         <h3>Test :</br></br>
@@ -76,8 +76,8 @@
         <h3>Time(8 a.m. - 10 p.m.) : <input type="time" name="time" required> </h3>
         <h3>Patient Number : </h3>
         <div class="confirmapp_btn">
-            <button class="btn btn-lg btn-primary">Confirm</button>
             <button class="btn btn-lg btn-primary">Go Back</button>
+            <button class="btn btn-lg btn-primary">Confirm</button>
         </div>
       </form>  
     </div>

@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from doctors.models import doctor
 from hospitals.models import hospital
-from .models import appointment_details
+from .models import appointment_details,test_details
 from django.contrib import messages
 
 def confirmAppointment(request,doc_id):  
@@ -32,11 +32,21 @@ def confirmAppointment(request,doc_id):
 
 def select_test(request,hosp_id):
 
-    hosp_p=get_object_or_404(hospital,pk=hosp_id)
+    if request.method == "POST":
+        date=request.POST["date"]
+        time=request.POST["time"]
+        test=request.POST["test"]
 
-    context = {
-      "hosp_p":hosp_p
-    }
+        test_sc=test_details(hospital_id=hosp_id,patient_id=request.user.id,date=date,time=time,test=test)
+        test_sc.save()
+        messages.success(request,"Test appointment placed")
+        return redirect("dashboard")  
+    else:
+        hosp_p=get_object_or_404(hospital,pk=hosp_id)
+
+        context = {
+            "hosp_p":hosp_p
+        }
 
     return render(request,"appotests/select_test.html",context)
 
