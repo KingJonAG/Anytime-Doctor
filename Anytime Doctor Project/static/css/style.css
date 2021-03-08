@@ -215,7 +215,13 @@
     font-weight: 400;
     font-size: 2.5rem;
 }
-
+.appointment_card{
+    display: flex;
+    border: 1px black solid;;
+}
+.appointment_card h5{
+    margin-right: 0.8rem;
+}
 
 /* Profile details */
 
