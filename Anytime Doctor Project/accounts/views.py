@@ -2,6 +2,9 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.contrib.auth.models import User,auth
 from accounts.models import UserExtra
+from appotests.models import appointment_details,test_details
+from doctors.models import doctor
+from hospitals.models import hospital
 # from django.contrib.auth import authenticate, login
 
 
@@ -60,4 +63,15 @@ def logout(request):
         return render(request,"pages/index.html")   
 
 def dashboard(request):
-    return render(request,"accounts/dashboard.html")             
+
+    appointments=appointment_details.objects.all()
+    tests=test_details.objects.all()
+    doctors=doctor.objects.all()
+
+    context={
+        "appointments":appointments,
+        "tests":tests,
+        "doctors":doctors
+    }
+
+    return render(request,"accounts/dashboard.html",context)             

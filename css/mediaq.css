@@ -1,3 +1,18 @@
+/* 4k */
+@media (min-width:2560px){
+    .myNavTitle{
+        width: 20rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .navbar-nav{
+        margin-left: 1.5rem;
+        font-size: 2rem;
+    }
+    .navbar-nav li{
+        margin-right: 2rem;
+    }
+}
 @media (max-width:991px){
     .myNavTitle{
         margin-top: -1.5rem;
@@ -23,6 +38,16 @@
         text-align: center;
         /* opacity: 0.9; */
     }
+    .maintext{
+        font-size: 2.2rem !important;
+    }
+}
+@media (max-width:425px)
+{
+    .maintext{
+        margin-top: 3rem;
+    }
+}
 @media (max-width:362px){
     .navbar-toggler{
         background-color: rgba(255, 255, 255, 0.699);
